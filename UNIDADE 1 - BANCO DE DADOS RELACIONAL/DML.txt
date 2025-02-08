@@ -1,0 +1,11 @@
+insert into empregado values (1, 'Marcos', 'Rua XV', 'Joinville');
+insert into empregado values (2, 'Paulo', 'Rua XXV', 'Joinville');
+insert into empregado values (12, 'Santos', 'Rua XIV', 'Joinville');
+
+insert into dependente (nomdep, datnasc, matemp) values ('Marcos Jr', '2024-01-20', 1);
+insert into dependente (nomdep, datnasc, matemp) values ('Marcos Jr 2º', '2025-01-20', 1);
+insert into dependente (nomdep, datnasc, matemp) values ('Paulo Jr', '2024-01-20', 2);
+insert into dependente (nomdep, datnasc, matemp) values ('Paulo Jr 2º', '2025-01-20', 14); --Erro chave não existe
+insert into dependente (nomdep, datnasc, matemp) values ('Paulo Jr', '2025-01-20', 2); --Erro nome duplicado
+
+delete from empregado where matemp = 12;

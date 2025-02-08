@@ -1,0 +1,32 @@
+select nomemp
+from empregado
+where salariobruto = (select max(salariobruto) from empregado);
+
+select distinct matemp, horas
+from trabalha_em
+where horas in (select horas from trabalha_em where matemp = '10');
+
+select nomemp
+from empregado
+where salario > all (select salario
+						from empregado
+						where coddepto = 2);
+
+select nomemp
+from empregado e
+where e.matemp in (select matemp
+					from dependente d
+					where e.sexo = d.sexo);
+
+select nomemp
+from empregado e
+where exists (select *
+					from dependente d
+					where d.matemp = e.matemp);
+
+select nomemp
+from empregado e
+where not exists (select *
+					from dependente d
+					where d.matemp = e.matemp);
+

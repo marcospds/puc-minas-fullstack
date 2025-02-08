@@ -1,0 +1,15 @@
+alter table empregado add ufemp char (2) null;
+
+alter table empregado drop ufemp;
+
+alter table dependente drop constraint pk_dep;
+
+alter table empregado drop constraint pk_emp;
+
+alter table empregado add constraint pk_emp primary key (matemp);
+
+alter table dependente add constraint pk_dep primary key (matemp, nomdep);
+
+drop table empregado;
+
+drop table dependente;

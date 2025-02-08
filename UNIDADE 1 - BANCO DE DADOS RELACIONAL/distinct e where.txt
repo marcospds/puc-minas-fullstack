@@ -1,0 +1,9 @@
+select distinct codcliente from conta;
+
+select nomemp, cargo 
+from empregado
+where bairro = 'Savassi';
+
+select nomemp, cidemp 
+from empregado
+where matemp = 11;

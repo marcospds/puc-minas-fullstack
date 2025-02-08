@@ -1,0 +1,2 @@
+select e.nomemp as Nome, e.salario as "Salário", 12 * (e.salario + 300) as "Salário Maior" 
+from empregado e;

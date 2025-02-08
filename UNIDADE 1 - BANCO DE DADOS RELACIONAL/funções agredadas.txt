@@ -1,0 +1,4 @@
+select sum(salario) as soma, max(salario) as maior, min(salario) as menor, avg(salario) as "média"
+from empregado;
+
+select count(*) from empregado;

@@ -1,0 +1,37 @@
+create table empregado (
+  matemp smallint not null,
+  nomemp char (30) not null,
+  endemp char (80) null,
+  cidemp char (20),
+CONSTRAINT pk_emp PRIMARY KEY (matemp)
+);
+
+insert into empregado (matemp, nomemp, endemp, cidemp) values (1, 'Marcos', 'Rua XV', 'Joinville');
+
+select * from empregado;
+
+create table dependente (
+  nomdep char (30),
+  datnasc date,
+  matemp smallint,
+CONSTRAINT pk_dep PRIMARY KEY (matemp, nomdep)
+);
+
+insert into dependente (nomdep, datnasc, matemp) values ('Marcos Jr', '2024-01-20', 1);
+insert into dependente (nomdep, datnasc, matemp) values ('Marcos Jr 2º', '2025-01-20', 1);
+
+select * from dependente;
+
+SELECT 
+    empregado.matemp,
+    nomemp,
+    endemp,
+    cidemp,
+    nomdep,
+    datnasc
+FROM 
+    empregado
+INNER JOIN 
+    dependente
+ON 
+    empregado.matemp = dependente.matemp;

@@ -1,0 +1,13 @@
+select nomemp 
+from empregado
+order by nomemp desc;
+
+select  coddepto as "Departamento", count(*) as "Quantidade", avg(salario) as "Média Salário"
+from empregado
+group by coddepto;
+
+select p.codprojeto, p.projnome, count(*)
+from projeto p, trabalha_em t
+where p.codprojeto = t.codprojeto
+group by p.codprojeto, p.projnome
+having count(*) >  2;

@@ -1,0 +1,15 @@
+select * from empregado e
+join departamento d on e.coddepto = d.coddepto;
+
+select * from empregado e
+left outer join departamento d on e.coddepto = d.coddepto;
+
+select * from empregado e
+right outer join departamento d on e.coddepto = d.coddepto;
+
+
+select * from empregado e
+full outer join departamento d on e.coddepto = d.coddepto;
+
+select * from empregado e
+cross join departamento d; -- Ideal no uso com where

@@ -1,0 +1,12 @@
+select * from dependente;
+
+select nomemp, cidemp from empregado;
+
+select nomemp, cidemp from empregado
+where matemp = 2;
+
+alter table empregado add salario float null;
+
+update empregado set salario = 2000 where matemp = 1;
+
+update empregado set salario = 2500 where matemp = 2;

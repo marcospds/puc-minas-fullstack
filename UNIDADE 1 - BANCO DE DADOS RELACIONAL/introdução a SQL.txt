@@ -1,0 +1,9 @@
+create table aluno (
+matricula int,
+nome varchar (30),
+CONSTRAINT pk_matricula PRIMARY KEY (matricula)
+);
+
+insert into aluno (matricula, nome) values (1, 'marcos');
+
+select * from aluno;

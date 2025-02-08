@@ -1,0 +1,13 @@
+select nomemp from empregado where cidemp like '%Belo Horizonte%';
+
+select nomemp from empregado where nomemp like '_a%';
+
+
+select * from empregado where (salario between 30000 and 40000) and coddepto = 1;
+
+
+select nomemp, salario, salario  from empregado where (salario between 30000 and 40000) or c = 1;
+
+select nomemp, cargo from empregado where cargo not in ('Vendedor', 'Presidente');
+
+select nomemp, cargo from empregado where comissao is not null and coddepto = 1;
