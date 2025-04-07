@@ -1,0 +1,9 @@
+.moviesContainer {
+    background-color: DimGray;
+}
+
+.moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
