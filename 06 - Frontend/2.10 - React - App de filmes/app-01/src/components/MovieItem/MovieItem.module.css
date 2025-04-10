@@ -1,8 +1,14 @@
 .movie {
+    background-color: whitesmoke;
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: outset;
     width: 200px;
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 20px;
+    text-align: center;
+    color: black;
 }
 
 .detailBtn {

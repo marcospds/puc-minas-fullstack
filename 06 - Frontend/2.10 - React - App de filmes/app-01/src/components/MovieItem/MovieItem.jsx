@@ -7,7 +7,7 @@ export function MovieItem({ movie }) {
             <img src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`} alt="" />
             <h3>{movie.title}</h3>
             <p>
-                <Link class={styles.detailBtn} to={`movie/${movie.id}`}>Ver detalhes</Link>
+                <Link class={styles.detailBtn} to={`/movie/${movie.id}`}>Ver detalhes</Link>
             </p>
         </div>
     )
